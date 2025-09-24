@@ -16,7 +16,7 @@ app.use(cors({
 app.use(cookieParser());
 
 //rutas
-app.use("/api/auth", routes);
+app.use("/api", routes);
 
 app.get("/", (req, res) => {
     res.send("Server readyyyy");
