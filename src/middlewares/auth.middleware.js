@@ -8,7 +8,7 @@ export const authMiddleware = (req, res, next) => {
             return res.status(401).json({ message: "Token no autenticado" });
         }; 
         const decoded = verifyToken(token, process.env.JWT_SECRET); 
-        req.user = decoded;
+        req.user = decoded; 
 
         next(); 
 
