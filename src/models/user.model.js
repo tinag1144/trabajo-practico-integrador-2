@@ -30,7 +30,7 @@ export const UserSchema = new Schema({
         avatarUrl: {
             type: String
         },
-        birthdate: {
+        birthDate: {
             type: Date
         }
 
