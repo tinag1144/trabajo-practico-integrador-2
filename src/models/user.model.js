@@ -14,7 +14,7 @@ export const UserSchema = new Schema({
     },
     role: {
         type: String,
-        enum: ['user', 'adming'],
+        enum: ['user', 'admin'],
         default: 'user'
     },
     profile: {
@@ -36,7 +36,18 @@ export const UserSchema = new Schema({
 
     }
 }, {
-    timestamps: true
+    timestamps: true,
 });
 
+UserSchema.virtual("articles", {
+    ref: "Articles",
+    localField: "_id",
+    foreignField: "author"
+});
+
+//esto es para qu los virtuals puedan aparecer como JSON u objetos (no te olvides)
+UserSchema.set("toObject", { virtuals: true });
+UserSchema.set("toJSON", { virtuals: true });
+
 export const UserModel = model("Users", UserSchema);
+

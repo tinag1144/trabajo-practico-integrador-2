@@ -1,4 +1,4 @@
-import { generateToken, verifyToken } from "../helpers/jtw.helper.js";
+import { generateToken } from "../helpers/jtw.helper.js";
 import { hashPassword, comparePasswords } from "../helpers/bcrypt.helper.js";
 import { UserModel } from "../models/user.model.js";
 
@@ -18,7 +18,8 @@ export const register = async (req, res) => {
 
         res.status(201).json({
             ok: true,
-            msg: "Usuario y perfil creados"
+            msg: "Usuario y perfil creados",
+            data: newRegister
         });
 
     } catch (error) {
