@@ -18,8 +18,7 @@ export const register = async (req, res) => {
 
         res.status(201).json({
             ok: true,
-            msg: "Usuario y perfil creados",
-            data: newRegister
+            msg: "Usuario y perfil creados"
         });
 
     } catch (error) {
@@ -27,6 +26,7 @@ export const register = async (req, res) => {
             ok: false,
             msg: "error en el servidor", error
         })
+        console.log(error);
     }
 };
 

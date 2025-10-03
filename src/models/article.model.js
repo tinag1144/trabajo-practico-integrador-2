@@ -32,4 +32,11 @@ export const ArticleSchema = new Schema({
     timestamps: true
 });
 
-export const UserModel = model("Users", UserSchema);
+
+ArticleSchema.virtual("comments", {
+  ref: "Comments",
+  localField: "_id",
+  foreignField: "article",
+});
+
+export const ArticleModel = model("Articles", ArticleSchema);
