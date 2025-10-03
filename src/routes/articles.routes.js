@@ -11,4 +11,4 @@ articleRoutes.get("/articles", authMiddleware, getArticles);
 articleRoutes.get("/articles/my", authMiddleware, getMyArticles);
 articleRoutes.get("/articles/:id", authMiddleware, getArticleById);
 articleRoutes.put("/articles/:id", authMiddleware, adminMiddleware, ownerMiddleware, updateArticles);
-articleRoutes.delete("/articles/:id", authMiddleware, ownerMiddleware, deleteArticle);
+articleRoutes.delete("/articles/:id", authMiddleware, adminMiddleware, ownerMiddleware, deleteArticle);
