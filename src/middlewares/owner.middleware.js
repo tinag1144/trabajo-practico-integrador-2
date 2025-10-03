@@ -7,9 +7,7 @@ export const ownerMiddleware = async (req, res, next) => {
     try {
         const { id } = req.params.id;
         const user = req.user.id; 
-
-        console.log(id, user);
-
+        
          const owner = await ArticleModel.findOne({
         id: id,
         author: user,

@@ -13,4 +13,4 @@ export const TagSchema = new Schema({
     timestamps: true
 });
 
-export const TagModel = model("Tags", UserSchema);
+export const TagModel = model("Tags", TagSchema);
