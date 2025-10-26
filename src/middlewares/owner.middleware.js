@@ -5,7 +5,7 @@ import { CommentModel } from "../models/comment.model.js";
 //dueño del articulo
 export const ownerMiddleware = async (req, res, next) => {
     try {
-        const { id } = req.params.id;
+        const { id } = req.params;
         const user = req.user.id; 
         
          const owner = await ArticleModel.findOne({
