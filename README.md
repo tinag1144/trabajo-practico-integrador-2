@@ -4,14 +4,6 @@
 Este proyecto consiste en el desarrollo de un sistema de blog personal construido con Node.js, Express, MongoDB y Mongoose.  
 Permite la autenticación de usuarios, la gestión de artículos, etiquetas y comentarios, y maneja relaciones 1:1, 1:N y N:M, además de validaciones completas con express-validator.
 
-## Objetivo
-Desarrollar una API RESTful funcional y segura que implemente:
-- Autenticación y autorización con JWT y cookies seguras.
-- Gestión de usuarios, artículos, etiquetas y comentarios.
-- Validaciones completas en express-validator y Mongoose.
-- Relaciones embebidas y referenciadas.
-- Eliminación lógica y en cascada.
-
 ## Tecnologías Utilizadas
 Backend: Node.js + Express  
 Base de datos: MongoDB  
@@ -25,7 +17,7 @@ Control de versiones: Git + GitHub
 ## Instalación y Configuración
 
 1. Clonar el repositorio  
-   git clone https://github.com/tuUsuario/trabajo-practico-integrador-2.git  
+   git clone https://github.com/tinag1144/trabajo-practico-integrador-2.git
    cd trabajo-practico-integrador-2
 
 2. Instalar dependencias  
@@ -216,14 +208,3 @@ Response
 - Arquitectura modular: controladores, middlewares, helpers.  
 - Código seguro y mantenible con roles y autenticación JWT.
 
-## Control de Versiones
-- main → rama estable.  
-- develop → integración.  
-- proyecto-integrador-mongodb → desarrollo principal.  
-- Mínimo 10 commits descriptivos durante el desarrollo.  
-- Merge limpio de ramas sin conflictos.
-
-## Autores
-Proyecto desarrollado por estudiantes del curso Tecnicatura en Programación (PoloTIC Misiones)  
-Profesor: [Nombre del docente]  
-Año: 2025
